@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 
 const Profile = ({ username, tag, location, avatar, stats }) => (
@@ -38,5 +37,3 @@ Profile.propTypes = {
     likes: PropTypes.number.isRequired,
   }).isRequired,
 };
-
-export default Profile;
