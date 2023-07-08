@@ -1,27 +1,55 @@
-const Profile = ({ username, tag, location, avatar, stats }) => {
-  return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+import PropTypes from 'prop-types';
+import {
+  Card,
+  Description,
+  Image,
+  Username,
+  Usertag,
+  Location,
+  Stats,
+  Stat,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+export const Profile = ({
+  avatar,
+  location,
+  stats: { followers, views, likes },
+  tag,
+  username,
+}) => {
+  return (
+    <Card>
+      <Description>
+        <Image src={avatar} alt={username} />
+        <Username>{username}</Username>
+        <Usertag>{tag}</Usertag>
+        <Location>{location}</Location>
+      </Description>
+
+      <Stats>
+        <Stat>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </Stat>
+        <Stat>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </Stat>
+        <Stat>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </Stat>
+      </Stats>
+    </Card>
   );
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  location: PropTypes.string,
+  followers: PropTypes.number,
+  stats: PropTypes.objectOf(PropTypes.number),
+  username: PropTypes.string,
 };
