@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className="profile">
@@ -27,5 +25,3 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
     </div>
   );
 };
-
-export default Profile;
