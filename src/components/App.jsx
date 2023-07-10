@@ -12,7 +12,18 @@ import transactions from 'path/to/transactions.json';
 
 export const App = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '20px',
+        fontSize: 40,
+        color: '#010101',
+        padding: '20px 0',
+      }}
+    >
       <Profile
         username={user.username}
         tag={user.tag}
