@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ProfileContainer = styled.div`
   margin: 50px;
   padding: 50px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -19,7 +19,7 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.p`
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
 `;
 
@@ -41,15 +41,17 @@ export const StatsList = styled.ul`
 `;
 
 export const StatsItem = styled.li`
+  margin: 10px;
   margin-right: 20px;
 `;
 
 export const Label = styled.span`
+  margin: 10px;
   font-size: 16px;
   font-weight: bold;
 `;
 
 export const Quantity = styled.span`
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
 `;

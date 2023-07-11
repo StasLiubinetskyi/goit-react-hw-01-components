@@ -2,14 +2,13 @@ import styled from 'styled-components';
 
 export const StatisticsContainer = styled.section`
   margin: 0px auto;
-  padding: 20px;
+  padding: 10px;
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 400px;
-  height: 100%;
+  width: 500px;
+  height: auto;
 `;
 
 export const Title = styled.h2`
@@ -18,8 +17,9 @@ export const Title = styled.h2`
 `;
 
 export const StatList = styled.ul`
+  display: inline-flex;
   list-style: none;
-  margin: 0;
+  margin: 20;
   padding: 0;
 `;
 
@@ -27,10 +27,11 @@ export const StatItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const Label = styled.span`
+  margin-left: 6px;
   font-size: 16px;
   font-weight: bold;
   margin-right: 10px;
